@@ -1,6 +1,6 @@
 name: VooDooMasterPlugin
 version: ${project.version}
-main: me.lojosho.voodoomasterplugin.VooDooMasterPlugin
+main: me.lojosho.voodoomasterplugin.Main
 api-version: 1.16
 authors: [LoJoSho]
 description: VooDoo datapacks converted into plugin format all in one plugin.
