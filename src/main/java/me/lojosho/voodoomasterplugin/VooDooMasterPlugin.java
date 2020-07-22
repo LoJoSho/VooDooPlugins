@@ -37,11 +37,11 @@ public final class VooDooMasterPlugin extends JavaPlugin implements Listener {
         if (this.getConfig().getBoolean("CutClean")) {
         Entity entity = event.getEntity();
         if (entity.getType() == EntityType.PIG) {
-            if (this.getConfig().getBoolean("CutClean.FromPigs")) {
-                int upper = this.getConfig().getInt("CutClean.CookedFoodFromPigs.pigmax");
-                int lower = this.getConfig().getInt("CutClean.CookedFoodFromPigs.pigmin");
-                int XPPigMax = this.getConfig().getInt("CutClean.CookedFoodFromPigs.pigXPmax");
-                int XPPigMin = this.getConfig().getInt("CutClean.CookedFoodFromPigs.pigXPmin");
+            if (this.getConfig().getBoolean("FromPigs")) {
+                int upper = this.getConfig().getInt("pigmax");
+                int lower = this.getConfig().getInt("pigmin");
+                int XPPigMax = this.getConfig().getInt("pigXPmax");
+                int XPPigMin = this.getConfig().getInt("pigXPmin");
                 int RandomPig = (int) (Math.random() * (upper - lower + 1)) + lower;
                 int RandomPigXP = (int) (Math.random() * (XPPigMax - XPPigMin + 1)) + XPPigMin;
                 event.getDrops().clear();
@@ -50,11 +50,11 @@ public final class VooDooMasterPlugin extends JavaPlugin implements Listener {
             }
         }
         if (entity.getType() == EntityType.COW) {
-            if (this.getConfig().getBoolean("CutClean.FromCows")) {
-                int upper = this.getConfig().getInt("CutClean.CookedFoodFromPigs.Cowsmax");
-                int lower = this.getConfig().getInt("CutClean.CookedFoodFromPigs.Cowsmin");
-                int XPCowMax = this.getConfig().getInt("CutClean.CookedFoodFromPigs.CowsXPmax");
-                int XPCowMin = this.getConfig().getInt("CutClean.CookedFoodFromPigs.CowsXPmin");
+            if (this.getConfig().getBoolean("FromCows")) {
+                int upper = this.getConfig().getInt("Cowsmax");
+                int lower = this.getConfig().getInt("Cowsmin");
+                int XPCowMax = this.getConfig().getInt("CowsXPmax");
+                int XPCowMin = this.getConfig().getInt("CowsXPmin");
                 int RandomCow = (int) (Math.random() * (upper - lower + 1)) + lower;
                 int RandomCowXP = (int) (Math.random() * (XPCowMax - XPCowMin + 1)) + XPCowMin;
                 event.getDrops().clear();
@@ -63,11 +63,11 @@ public final class VooDooMasterPlugin extends JavaPlugin implements Listener {
             }
         }
         if (entity.getType() == EntityType.CHICKEN) {
-            if (this.getConfig().getBoolean("CutClean.FromChicken")) {
-                int upper = this.getConfig().getInt("CutClean.CookedFoodFromPigs.Chickenmax");
-                int lower = this.getConfig().getInt("CutClean.CookedFoodFromPigs.Chickenmin");
-                int XPMax = this.getConfig().getInt("CutClean.CookedFoodFromPigs.ChickenXPmax");
-                int XPMin = this.getConfig().getInt("CutClean.CookedFoodFromPigs.ChickenXPmin");
+            if (this.getConfig().getBoolean("FromChicken")) {
+                int upper = this.getConfig().getInt("Chickenmax");
+                int lower = this.getConfig().getInt("Chickenmin");
+                int XPMax = this.getConfig().getInt("ChickenXPmax");
+                int XPMin = this.getConfig().getInt("ChickenXPmin");
                 int RandomAmountDropped = (int) (Math.random() * (upper - lower + 1)) + lower;
                 int RandomXP = (int) (Math.random() * (XPMax - XPMin + 1)) + XPMin;
                 event.getDrops().clear();
@@ -76,11 +76,11 @@ public final class VooDooMasterPlugin extends JavaPlugin implements Listener {
             }
         }
         if (entity.getType() == EntityType.SHEEP) {
-            if (this.getConfig().getBoolean("CutClean.FromSheep")) {
-                int upper = this.getConfig().getInt("CutClean.CookedFoodFromPigs.Sheepmax");
-                int lower = this.getConfig().getInt("CutClean.CookedFoodFromPigs.Sheepmin");
-                int XPMax = this.getConfig().getInt("CutClean.CookedFoodFromPigs.SheepXPmax");
-                int XPMin = this.getConfig().getInt("CutClean.CookedFoodFromPigs.SheepXPmin");
+            if (this.getConfig().getBoolean("FromSheep")) {
+                int upper = this.getConfig().getInt("Sheepmax");
+                int lower = this.getConfig().getInt("Sheepmin");
+                int XPMax = this.getConfig().getInt("SheepXPmax");
+                int XPMin = this.getConfig().getInt("SheepXPmin");
                 int RandomAmountDropped = (int) (Math.random() * (upper - lower + 1)) + lower;
                 int RandomXP = (int) (Math.random() * (XPMax - XPMin + 1)) + XPMin;
                 event.getDrops().clear();
@@ -93,7 +93,7 @@ public final class VooDooMasterPlugin extends JavaPlugin implements Listener {
     @EventHandler
     public void onIronBlockBreak(BlockBreakEvent event) {
         if (this.getConfig().getBoolean("SmeltedOres")) {
-            if (this.getConfig().getBoolean("SmeltedOres.SmeltedIron")) {
+            if (this.getConfig().getBoolean("SmeltedIron")) {
         if (event.getBlock().getType() == Material.IRON_ORE) {
             Block b = event.getBlock();
             b.setType(Material.AIR);
@@ -106,7 +106,7 @@ public final class VooDooMasterPlugin extends JavaPlugin implements Listener {
     @EventHandler
     public void onGoldBlockBreak(BlockBreakEvent event) {
         if (this.getConfig().getBoolean("SmeltedOres")) {
-            if (this.getConfig().getBoolean("SmeltedOres.SmeltedGold")) {
+            if (this.getConfig().getBoolean("SmeltedGold")) {
                 if (event.getBlock().getType() == Material.GOLD_ORE) {
                     Block b = event.getBlock();
                     b.setType(Material.AIR);
@@ -157,8 +157,8 @@ public final class VooDooMasterPlugin extends JavaPlugin implements Listener {
     }
     private void furnaceFurnace() {
         if (this.getConfig().getBoolean("ZombieLeatherRecipe")) {
-            int XP = this.getConfig().getInt("XP");
-            int Time = this.getConfig().getInt("CookingTime");
+            int XP = this.getConfig().getInt("LeatherCookingXP");
+            int Time = this.getConfig().getInt("LeatherCookingTime");
             ItemStack result = new ItemStack(Material.LEATHER);
             FurnaceRecipe recipe = new FurnaceRecipe(result, Material.ROTTEN_FLESH);
             recipe.setExperience(XP);
