@@ -1,2 +1,19 @@
-# VooDooPlugins
-A plugin meant to bring the magic of VooDoo datapacks to Spigot and its forks
+# VooDoo-Pack-Plugins
+A plugin meant to bring the magic of VooDoo Datapacks over to Spigot and its forks
+
+### [CutClean](http://mc.voodoobeard.com/#cutclean)!
+It's a 1.16 UHC module or a survival plugin that simply makes mobs drop their cooked food, ores to drop their ingots, and gravel to always give flint.
+
+### BatMembranes: 
+allows you to get Membranes another way, especially useful for servers who may have phantoms disabled. 
+
+### Zombie -> Leather: 
+A plugin that allows you to cook rotten flesh into useful leather
+
+### BotanicalReplication: 
+Place a flower, or lillypad, with rottenflesh and bonemeal and it will give you 3 of that flower. 
+
+### Layers2Blocks: 
+Allows you to put 8 snow layers in a chest pattern to form a normal snow block.
+
+You can find more information about each module as they are clones from datapacks. To find out all of them, see [Here](http://mc.voodoobeard.com/#)!
