@@ -10,7 +10,7 @@ public class ZombieLeather {
         this.plugin = plugin;
     }
 
-    private void furnaceFurnace() {
+    public void furnaceFurnace() {
         if (plugin.getConfig().getBoolean("ZombieLeatherRecipe")) {
             int XP = plugin.getConfig().getInt("LeatherCookingXP");
             int Time = plugin.getConfig().getInt("LeatherCookingTime");

@@ -7,7 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 
 public class Layer2Block {
-    private Main plugin;
+    private final Main plugin;
     public Layer2Block(Main plugin) {
         this.plugin = plugin;
     }
