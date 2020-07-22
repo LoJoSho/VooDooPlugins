@@ -6,6 +6,7 @@
 #    pigXPmax: 4 Max. XP to give out for killing pig
 #    pigXPmin: 10 Min. XP to give out for killing pig
 # CUTCLEAN
+bstats: true
 CutClean: false #Disables all of the below in CutClean. Change to true to turn it on and make what you want to true
 FromPigs: false #Should pigs drop cooked pork?
 pigmax: 2 #Max. amount it can drop

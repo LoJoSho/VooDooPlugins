@@ -1,5 +1,6 @@
 package me.lojosho.voodoomasterplugin;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
@@ -10,6 +11,7 @@ public class Main extends JavaPlugin { //Extending JavaPlugin so that Bukkit kno
     private static Plugin plugin;
 
     public void onEnable() {
+        this.saveDefaultConfig();
         plugin = this;
 //        new BatMembranes(this);
         registerEvents(this, new BatMembranes(this), new CutClean(this));
@@ -23,6 +25,10 @@ public class Main extends JavaPlugin { //Extending JavaPlugin so that Bukkit kno
         BotanicalReplication BR = new BotanicalReplication(this);
         BR.BotanicalReplicationRecipes();
 //        CutClean CC = new CutClean(this);
+        if (this.getConfig().getBoolean("bstats") == true) {
+            int pluginId = 8281; // <-- Replace with the id of your plugin!
+            Metrics metrics = new Metrics(this, pluginId);
+        }
 
 //This is where we register our events/commands
     }
