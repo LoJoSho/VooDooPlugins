@@ -17,3 +17,5 @@ Place a flower, or lillypad, with rottenflesh and bonemeal and it will give you 
 Allows you to put 8 snow layers in a chest pattern to form a normal snow block.
 
 You can find more information about each module as they are clones from datapacks. To find out all of them, see [Here](http://mc.voodoobeard.com/#)!
+
+If you have any questions or feature requests, feel free to join [G.E.A.R.S](https://discord.gg/qnJ75pX) on @general-support.
