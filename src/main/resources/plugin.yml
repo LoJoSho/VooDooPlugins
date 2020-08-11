@@ -1,4 +1,4 @@
-name: VooDooMasterPlugin
+name: VooDooPlugin
 version: ${project.version}
 main: me.lojosho.voodoomasterplugin.Main
 api-version: 1.16

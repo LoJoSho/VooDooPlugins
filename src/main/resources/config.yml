@@ -45,3 +45,9 @@ LeatherCookingTime: 160 # This is in ticks. 20 Ticks = 1 second
 LeatherCookingXP: 4 #Amount of XP to give
 ### SNOWLAYER TO SNOWBLOCK
 SnowLayersToBlocks: false #8 Snow Layers in a chest format to a snow block
+### Mixed Stone Tools
+MixedStoneTools: false
+### Blasted Redstone Blocks
+BlastedRedstone: false
+BlastedRedstoneCookingTime: 160 # This is in ticks. 20 Ticks = 1 second
+BlastedRedstoneCookingXP: 4 #Amount of XP to give
